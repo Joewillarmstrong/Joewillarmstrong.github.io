@@ -1,0 +1,30 @@
+{
+  "id": "SB-000",
+  "slug": "client-spot-name",
+  "format": "Ad",
+  "title": "Client – 'Spot name', 30s TVC",
+  "client_or_network": "Client (agency: Agency)",
+  "year_released": 2025,
+  "country": "AU",
+  "original_track": {
+    "artist": "",
+    "title": "",
+    "year": 0,
+    "source_url": "https://"
+  },
+  "video": { "platform": "youtube", "url": "", "start_seconds": 0 },
+  "brief_summary": "",
+  "assigned_publisher": "",
+  "playlist": {
+    "spotify_url": "https://open.spotify.com/playlist/",
+    "embed_url": "https://open.spotify.com/embed/playlist/",
+    "track_count": 5
+  },
+  "tracks": [
+    { "position": 1, "artist": "", "title": "", "note": "" }
+  ],
+  "rationale": null,
+  "tags": [],
+  "date_completed": "YYYY-MM-DD",
+  "disclaimer": "Practice brief based on a released project. Not affiliated with the original production."
+}

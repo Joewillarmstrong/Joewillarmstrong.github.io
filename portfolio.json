@@ -1,0 +1,104 @@
+[
+  {
+    "id": "SB-001",
+    "slug": "realestate-keep-moving",
+    "format": "Ad",
+    "title": "realestate.com.au – 'Keep Moving', 60s brand film",
+    "client_or_network": "realestate.com.au (REA Group)",
+    "year_released": 2024,
+    "country": "AU",
+    "original_track": {
+      "artist": "Eurogliders",
+      "title": "Heaven (Must Be There)",
+      "year": 1984,
+      "source_url": "https://campaignbrief.com/realestate-com-au-helps-australians-to-keep-moving-in-new-brand-campaign-via-72andsunny/"
+    },
+    "video": { "platform": "youtube", "url": "", "start_seconds": 0 },
+    "brief_summary": "A 60-second brand film following a young family through a run of lost auctions to finally winning their new home. The music needed a recognisable opening that could become the brand's sonic signature, a lift at the turning point, and an aspirational lyric that doesn't literally describe moving.",
+    "assigned_publisher": "Native Tongue",
+    "playlist": {
+      "spotify_url": "https://open.spotify.com/playlist/1eqJ6OtMMhtEN3mQsISTMn",
+      "embed_url": "https://open.spotify.com/embed/playlist/1eqJ6OtMMhtEN3mQsISTMn",
+      "track_count": 5
+    },
+    "tracks": [
+      { "position": 1, "artist": "WLSN", "title": "Weightless", "note": "Bright modern soul with clean guitars and horns for an instant sonic identity; nostalgic but current, with positive lyrics pointing to a brighter future." },
+      { "position": 2, "artist": "The Go-Betweens", "title": "Streets Of Your Town", "note": "Australian band with an infectious, recognisable intro; close to the subject without being on the nose, and likely to resonate with a sports audience." },
+      { "position": 3, "artist": "Terrible Sons", "title": "Easy Love", "note": "Warm, acoustic-led and sunny, with a stripped-back bridge for the rejections and a final chorus lift to bring the family home." },
+      { "position": 4, "artist": "Hollow Coves", "title": "Borderlines", "note": "A distinctive acoustic guitar line that carries across formats and cutdowns, picking up around 32s into an aspirational chorus." },
+      { "position": 5, "artist": "The Warratahs", "title": "Maureen", "note": "A fiddle opening gives instant identity; a walking bass keeps it fun and suits the comic undertone, and a sparse chorus leaves room for the picture." }
+    ],
+    "rationale": null,
+    "tags": ["advertising", "property", "australian", "uplifting", "nostalgic", "sonic branding"],
+    "date_completed": "2026-10-08",
+    "disclaimer": "Practice brief based on a released project. Not affiliated with the original production."
+  },
+  {
+    "id": "SB-002",
+    "slug": "uno-win-at-home-loans",
+    "format": "Ad",
+    "title": "uno Home Loans – 'Win at Home Loans', open-home dance",
+    "client_or_network": "uno Home Loans (agency: Ugly Sydney)",
+    "year_released": 2018,
+    "country": "AU",
+    "original_track": {
+      "artist": "A Flock of Seagulls",
+      "title": "I Ran (So Far Away)",
+      "year": 1982,
+      "source_url": "https://themusicnetwork.com/sync-watch/sync-watch-april-19"
+    },
+    "video": { "platform": "youtube", "url": "", "start_seconds": 0 },
+    "brief_summary": "A 30s national TVC for a home loan challenger brand: a woman dances alone through a sunlit house, then the camera pulls out to reveal she's at an open-for-inspection. The track needed instant energy, a lift by 0:15 and a clean button at 0:20, with a cheeky 80s feel.",
+    "assigned_publisher": "Sony Music Publishing",
+    "playlist": {
+      "spotify_url": "https://open.spotify.com/playlist/5nUCrMkrFm4pQIjivBzBY5",
+      "embed_url": "https://open.spotify.com/embed/playlist/5nUCrMkrFm4pQIjivBzBY5",
+      "track_count": 5
+    },
+    "tracks": [
+      { "position": 1, "artist": "Bruce Springsteen", "title": "Glory Days", "note": "Instant energy; edit at 15s straight into a big chorus, with room to drop out for the agent reveal." },
+      { "position": 2, "artist": "David Bowie", "title": "Shake It", "note": "Bright key riff and big drums from the first seconds; the title hook matches the dancing on screen." },
+      { "position": 3, "artist": "Depeche Mode", "title": "Just Can't Get Enough", "note": "Instantly recognisable intro, right in the era; the title says the 'beat the system' feeling." },
+      { "position": 4, "artist": "Empire of the Sun", "title": "The Feeling You Get", "note": "The contemporary option: 80s-inspired, high energy from the start, likely kinder on budget." },
+      { "position": 5, "artist": "John Mellencamp", "title": "Play Guitar", "note": "High energy with a clean cut into the chorus at 20s; a looser lyric fit, so a back-up option." }
+    ],
+    "rationale": "The brief called for instant energy, so every pick opens hot and has a clean edit point around 15–20 seconds to jump into the chorus while she's dancing. I kept the lyrics to the title hooks, letting lines like 'Glory Days', 'Shake It' and 'Just Can't Get Enough' carry the feeling of triumph and beating the system, with the rest running as instrumental. Most picks sit squarely in the 80s era the agency loves, and I included Empire of the Sun as a contemporary option that calls back to that sound and would likely suit a more moderate budget if the bigger names are out of reach.",
+    "tags": ["ad", "comedy", "80s", "dance", "high energy", "reveal", "financial services"],
+    "date_completed": "2026-10-13",
+    "disclaimer": "Practice brief based on a released project. Not affiliated with the original production."
+  },
+  {
+    "id": "SB-003",
+    "slug": "boy-swallows-universe-ep4-car-crash-flashback",
+    "format": "TV",
+    "title": "Boy Swallows Universe – Ep 4, the car crash flashback",
+    "client_or_network": "Netflix",
+    "year_released": 2024,
+    "country": "AU",
+    "original_track": {
+      "artist": "Australian Crawl",
+      "title": "Reckless (Don't Be So...)",
+      "year": 1983,
+      "source_url": "https://www.tunefind.com/show/boy-swallows-universe/season-1/246317"
+    },
+    "video": { "platform": "youtube", "url": "", "start_seconds": 0 },
+    "brief_summary": "A withdrawn father finally tells the story of the car crash he survived with his two young sons. The music had to sit under a present-day confession, build through a golden flashback and peak at the crash, using period-true Australian music from the late 70s to 1990.",
+    "assigned_publisher": "Mushroom Music",
+    "playlist": {
+      "spotify_url": "https://open.spotify.com/playlist/6FsWCL5X8k91jBd0gH0oh5",
+      "embed_url": "https://open.spotify.com/embed/playlist/6FsWCL5X8k91jBd0gH0oh5",
+      "track_count": 5
+    },
+    "tracks": [
+      { "position": 1, "artist": "The Triffids", "title": "Wide Open Road", "note": "Drives without too much intensity, fits the era and builds to match the scene's pivotal moment." },
+      { "position": 2, "artist": "Hunters & Collectors", "title": "Around The Flame", "note": "Reflective and melancholic, centred on looking back; starts sparse and builds." },
+      { "position": 3, "artist": "Weddings Parties Anything", "title": "For A Short Time", "note": "Over five minutes long for room in the edit; a sad heart, with instrumentation that builds into the climax." },
+      { "position": 4, "artist": "Richard Clapton", "title": "Goodbye Tiger", "note": "Atmospheric guitar arpeggios and reverb; reflective and melancholic, slow to mid-tempo, and builds." },
+      { "position": 5, "artist": "Shane Howard", "title": "Mother Earth", "note": "Left-field option that adds emotional weight, feels very Australian and could carry the swell." }
+    ],
+    "rationale": "I looked for Australian songs of the era that feel reflective and melancholic, centred on looking back and regret, and that start sparse and build, so the editor can match the scene's pivotal moment. Wide Open Road drives without too much intensity; Around the Flame and For a Short Time carry a sad heart, and the five-minute length of the latter gives room in the edit. Goodbye Tiger moves into a more atmospheric space with its guitar arpeggios and reverb, and Shane Howard's Mother Earth is a left-field option that feels very Australian and could carry the swell the scene needs.",
+    "tags": ["drama", "flashback", "period", "australian", "melancholy", "build"],
+    "date_completed": "2026-10-15",
+    "disclaimer": "Practice brief based on a released project. Not affiliated with the original production."
+  }
+]
