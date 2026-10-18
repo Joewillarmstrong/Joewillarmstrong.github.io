@@ -146,6 +146,10 @@ dialog::backdrop{background:rgb(0 0 0 / .6)}
 .embed.video iframe{position:absolute;inset:0;height:100%}
 .embed-fallback{display:inline-block;margin:0 0 32px;color:var(--muted)}
 .pending{aspect-ratio:16/9;display:grid;place-items:center;text-align:center;padding:24px;color:var(--muted);background:var(--bg-2);border:1px dashed var(--line);margin:0 0 20px}
+.listen{aspect-ratio:16/9;display:flex;flex-direction:column;justify-content:space-between;gap:12px;padding:clamp(20px,3vw,32px);background:var(--accent);color:var(--on-accent);text-decoration:none;margin:0 0 20px;transition:transform .2s ease}
+.listen:hover{transform:translateY(-2px)}
+.listen-t{font-weight:900;font-stretch:115%;text-transform:uppercase;font-size:clamp(24px,3vw,40px);line-height:1;letter-spacing:-.02em}
+.listen-cta{font-weight:700;border-bottom:2px solid currentColor;align-self:flex-start;padding-bottom:2px}
 .aired{position:sticky;top:88px;align-self:start}
 @media (max-width:899px){ .brief-top{grid-template-columns:1fr} .aired{position:static} }
 .reveal{margin-top:40px;background:var(--bg-2);border:1px solid var(--line);padding:28px}
@@ -225,6 +229,10 @@ fetch('portfolio.json',{cache:'no-cache'}).then(function(r){ if(!r.ok) throw r; 
     return i > -1 ? [title.slice(0,i), title.slice(i+3)] : [title, ''];
   }
   function fmt(f){ return f === 'Ad' ? 'Advertising' : f; }
+  function srcName(u){
+    var h = new URL(u).hostname.replace('www.','');
+    return h === 'tunefind.com' ? 'TuneFind' : h;
+  }
 
   // Releases
   var list = document.getElementById('releases');
@@ -281,7 +289,13 @@ fetch('portfolio.json',{cache:'no-cache'}).then(function(r){ if(!r.ok) throw r; 
     var right = el('div',{cls:'aired'},[
       el('h4',{text:'WHAT AIRED'}),
       vid ? el('div',{cls:'embed video'},[ el('iframe',{src:'https://www.youtube-nocookie.com/embed/'+vid+(e.video.start_seconds?'?start='+e.video.start_seconds:''),loading:'lazy',title:e.client_or_network+' — what aired',allow:'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture',allowfullscreen:''}) ])
-          : el('div',{cls:'pending mono',text:'Video coming soon'}),
+          : (e.original_track.source_url
+              ? el('a',{cls:'listen',href:e.original_track.source_url,target:'_blank',rel:'noopener'},[
+                  el('span',{cls:'mono',text:'NO VIDEO · LISTEN INSTEAD'}),
+                  el('span',{cls:'listen-t',text:'Hear the track that aired'}),
+                  el('span',{cls:'listen-cta',text:'Listen on '+srcName(e.original_track.source_url)+' ↗'})
+                ])
+              : el('div',{cls:'pending mono',text:'Video coming soon'})),
       el('p',{cls:'track',style:'margin-top:20px',text:e.original_track.title}),
       el('p',{cls:'by',text:e.original_track.artist + (e.original_track.year ? ' · ' + e.original_track.year : '')}),
       el('dl',{cls:'facts'},[
