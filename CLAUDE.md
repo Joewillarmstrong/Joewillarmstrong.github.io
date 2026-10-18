@@ -3,7 +3,7 @@
 Static site shared with music publishers and music supervisors. No build step, no dependencies.
 
 - `index.html` — the whole front end (HTML, CSS, JS). Loads `portfolio.json` at runtime.
-- `portfolio.json` — one entry per brief; this is the content. Newest id shows first.
+- `portfolio.json` — one entry per brief; this is the content. Shown in id order, oldest (SB-001) first.
 - `templates/brief.template.json` — skeleton for a new entry.
 - `scripts/validate.py` — schema/consistency check. `--next` prints the next free id.
 - `scripts/serve.sh` — validates, then previews at http://localhost:8000.

@@ -120,6 +120,7 @@ dialog::backdrop{background:rgb(0 0 0 / .6)}
 .case{min-height:100%;padding:calc(env(safe-area-inset-top,0px) + 0px) 0 calc(env(safe-area-inset-bottom,0px) + 64px);overflow-y:auto}
 .case-bar{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:2}
 .case-bar .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.case-nav{display:flex;align-items:center;gap:20px}
 .close{background:none;border:1px solid var(--line);color:var(--fg);font:inherit;font-weight:600;padding:10px 16px;cursor:pointer}
 .close:hover{border-color:var(--fg)}
 .case-head{padding:56px 0 40px;border-bottom:1px solid var(--line)}
@@ -212,7 +213,7 @@ dialog::backdrop{background:rgb(0 0 0 / .6)}
 
 <script>
 fetch('portfolio.json',{cache:'no-cache'}).then(function(r){ if(!r.ok) throw r; return r.json(); }).then(function(data){
-  var entries = data.slice().sort(function(a,b){ return b.id.localeCompare(a.id); });
+  var entries = data.slice().sort(function(a,b){ return a.id.localeCompare(b.id); });
 
   function el(tag, attrs, kids){
     var n = document.createElement(tag);
@@ -304,7 +305,7 @@ fetch('portfolio.json',{cache:'no-cache'}).then(function(r){ if(!r.ok) throw r; 
       ])
     ]);
 
-    inner.appendChild(el('div',{cls:'case-bar'},[el('div',{cls:'wrap'},[el('span',{cls:'mono',text:e.id+' · '+fmt(e.format)}), (function(){ var c=el('button',{cls:'close',type:'button'},['Close ✕']); c.addEventListener('click',close); return c; })()])]));
+    inner.appendChild(el('div',{cls:'case-bar'},[el('div',{cls:'wrap'},[el('div',{cls:'case-nav'},[(function(){ var h=el('button',{cls:'close',type:'button'},['← Home']); h.addEventListener('click',function(){ close(); window.scrollTo(0,0); }); return h; })(), el('span',{cls:'mono',text:e.id+' · '+fmt(e.format)})]), (function(){ var c=el('button',{cls:'close',type:'button'},['Close ✕']); c.addEventListener('click',close); return c; })()])]));
     inner.appendChild(el('div',{cls:'wrap'},[
       el('div',{cls:'case-head'},[ el('span',{cls:'mono',style:'color:var(--accent)',text:e.id}), el('h2',{id:'case-title',text:p[0]}), el('p',{cls:'spot',text:p[1]}) ]),
       top,
