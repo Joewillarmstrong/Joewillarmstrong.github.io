@@ -96,6 +96,9 @@ img{max-width:100%}
 .how summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;padding:28px 0;font-weight:900;font-stretch:125%;text-transform:uppercase;font-size:clamp(26px,3.4vw,44px);line-height:1;letter-spacing:-.03em}
 .how summary::-webkit-details-marker{display:none}
 .how summary:hover{color:var(--accent)}
+.how + .how{border-top:0}
+.contact-body{padding:8px 0 40px;font-size:20px}
+.contact-body .facts{margin:0}
 .plus{position:relative;width:48px;height:48px;flex:none;border:1px solid var(--line)}
 .plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;width:18px;height:2px;background:currentColor;transform:translate(-50%,-50%)}
 .plus::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .25s ease}
@@ -129,6 +132,7 @@ dialog::backdrop{background:rgb(0 0 0 / .6)}
 .case-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(32px,5vw,80px);padding-top:48px}
 .case h4{font-family:var(--mono);font-weight:600;font-size:13px;color:var(--accent);margin:0 0 14px;letter-spacing:.04em}
 .case .summary{font-size:20px;line-height:1.5;margin:0 0 32px;max-width:40ch}
+.case .brief-note{margin:-12px 0 32px;max-width:40ch;color:var(--muted)}
 .facts{display:grid;grid-template-columns:auto 1fr;gap:10px 24px;margin:0 0 32px}
 .facts dt{color:var(--muted)}
 .facts dd{margin:0;font-weight:600}
@@ -172,7 +176,7 @@ dialog::backdrop{background:rgb(0 0 0 / .6)}
 <header class="nav">
   <div class="wrap">
     <a class="brand" href="#top">Joe Armstrong<span>.</span></a>
-    <nav aria-label="Main"><ul><li><a href="#work">Work</a></li><li><a href="#process" id="howlink">Process</a></li></ul></nav>
+    <nav aria-label="Main"><ul><li><a href="#work">Work</a></li><li><a href="#process" id="howlink">Process</a></li><li><a href="#contact" id="contactlink">Contact</a></li></ul></nav>
   </div>
 </header>
 
@@ -180,7 +184,7 @@ dialog::backdrop{background:rgb(0 0 0 / .6)}
   <section class="hero wrap">
     <h1 class="rise">Sync project, <em>brief</em> by brief.</h1>
     <div class="hero-row">
-      <p class="rise" style="--i:1">Based on real-life briefs, this portfolio serves as a testing ground for placing music to already existing visuals. Each brief works with the catalogue of one publisher, with all information gathered through publisher websites. Only after each brief is complete is the final visual and audio revealed.</p>
+      <p class="rise" style="--i:1">Based on real-life briefs, this portfolio serves as a testing ground for placing music to already existing visuals. Each brief works with the catalogue of one publisher (not necessarily the actual publisher), with all information gathered through publisher websites. Only after each brief is complete is the final visual and audio revealed.</p>
       <a class="btn rise" style="--i:2" href="#work">See the work <span aria-hidden="true">↓</span></a>
     </div>
   </section>
@@ -197,6 +201,15 @@ dialog::backdrop{background:rgb(0 0 0 / .6)}
         <div class="step"><h3>The brief</h3><p>A realistic request from an agency or music supervisor, based on a released project. The project itself stays hidden.</p></div>
         <div class="step"><h3>The search</h3><p>I pitch from one assigned Australian publisher's catalogue only, with a note on why each track fits the picture.</p></div>
         <div class="step"><h3>The reveal</h3><p>After I complete the brief, the real project and the track that aired are revealed.</p></div>
+      </div>
+    </details>
+    <details class="how" id="contact">
+      <summary><span>Contact</span><span class="plus" aria-hidden="true"></span></summary>
+      <div class="contact-body">
+        <dl class="facts">
+          <dt>Email</dt><dd><a href="mailto:Joearmstrong03@gmail.com">Joearmstrong03@gmail.com</a></dd>
+          <dt>Phone</dt><dd><a href="tel:+61422765094">0422 765 094</a></dd>
+        </dl>
       </div>
     </details>
   </section>
@@ -259,7 +272,7 @@ fetch('portfolio.json',{cache:'no-cache'}).then(function(r){ if(!r.ok) throw r; 
     function ytId(u){ if(!u) return ''; var m=u.match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([A-Za-z0-9_-]{11})/); return m?m[1]:''; }
 
     var top = el('div',{cls:'brief-top'},[
-      el('div',null,[ el('h4',{text:'THE BRIEF'}), el('p',{cls:'summary',text:e.brief_summary}) ]),
+      el('div',null,[ el('h4',{text:'THE BRIEF'}), el('p',{cls:'summary',text:e.brief_summary}), e.brief_note ? el('p',{cls:'brief-note',text:e.brief_note}) : null ]),
       el('div',null,[
         el('dl',{cls:'facts'},[
           el('dt',{text:'Format'}), el('dd',{text:fmt(e.format)}),
@@ -322,6 +335,7 @@ fetch('portfolio.json',{cache:'no-cache'}).then(function(r){ if(!r.ok) throw r; 
   if (/^#SB-/.test(location.hash)) open(location.hash.slice(1), false);
 
   document.getElementById('howlink').addEventListener('click',function(){ document.querySelector('.how').open = true; });
+  document.getElementById('contactlink').addEventListener('click',function(){ document.getElementById('contact').open = true; });
 
   // Reveal on scroll
   var items = document.querySelectorAll('.rise');

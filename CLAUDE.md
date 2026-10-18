@@ -18,6 +18,7 @@ Static site shared with music publishers and music supervisors. No build step, n
 - `title` is `Client – Spot` with a spaced en dash; the page splits on it.
 - `format` is `Ad`, `TV` or `Film`. `video.url` may be empty (shows "Video coming soon").
 - Pitches come from ONE assigned publisher's catalogue; keep `assigned_publisher` accurate.
+- `brief_note` (optional) is a short extra line shown under the brief summary, e.g. where it aired or era constraints.
 - Keep the disclaimer on every entry: practice briefs, not affiliated with the original productions.
 - Don't rename ids or slugs once shared; `#SB-00X` links are deep links.
 - Australian spelling (en-AU).
