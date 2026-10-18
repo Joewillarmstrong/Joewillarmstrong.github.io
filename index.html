@@ -62,7 +62,7 @@ img{max-width:100%}
 
 /* Hero: left-aligned, type is the visual */
 .hero{padding:clamp(48px,8vw,96px) 0 clamp(40px,6vw,72px)}
-.hero h1{font-weight:900;font-stretch:125%;text-transform:uppercase;font-size:clamp(44px,8.6vw,132px);line-height:.92;letter-spacing:-.035em;margin:0 0 32px;max-width:14ch}
+.hero h1{font-weight:900;font-stretch:125%;text-transform:uppercase;font-size:clamp(34px,5.6vw,84px);line-height:.95;letter-spacing:-.03em;margin:0 0 32px;max-width:20ch}
 .hero h1 em{font-style:normal;color:var(--accent)}
 .hero-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:32px;align-items:end}
 .hero p{font-size:clamp(17px,1.4vw,20px);color:var(--muted);max-width:62ch;margin:0}
@@ -99,6 +99,8 @@ img{max-width:100%}
 .how + .how{border-top:0}
 .contact-body{padding:8px 0 40px;font-size:20px}
 .contact-body .facts{margin:0}
+.contact-body h4{font-weight:600;font-size:13px;color:var(--accent);margin:0 0 14px;letter-spacing:.04em}
+.contact-body .about{margin:0 0 36px;max-width:62ch}
 .plus{position:relative;width:48px;height:48px;flex:none;border:1px solid var(--line)}
 .plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;width:18px;height:2px;background:currentColor;transform:translate(-50%,-50%)}
 .plus::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .25s ease}
@@ -183,7 +185,7 @@ dialog::backdrop{background:rgb(0 0 0 / .6)}
 
 <main id="top">
   <section class="hero wrap">
-    <h1 class="rise">Sync project, <em>brief</em> by brief.</h1>
+    <h1 class="rise">Joe Armstrong, <em>sync portfolio</em>.</h1>
     <div class="hero-row">
       <p class="rise" style="--i:1">Based on real-life briefs, this portfolio serves as a testing ground for placing music to already existing visuals. Each brief works with the catalogue of one publisher (not necessarily the actual publisher), with all information gathered through publisher websites. Only after each brief is complete is the final visual and audio revealed.</p>
       <a class="btn rise" style="--i:2" href="#work">See the work <span aria-hidden="true">↓</span></a>
@@ -207,6 +209,9 @@ dialog::backdrop{background:rgb(0 0 0 / .6)}
     <details class="how" id="contact">
       <summary><span>Contact</span><span class="plus" aria-hidden="true"></span></summary>
       <div class="contact-body">
+        <h4 class="mono">ABOUT ME</h4>
+        <p class="about">With over five years of experience working for the world's biggest record labels across domestic and international marketing, I've worked with artists such as Dermot Kennedy, The Lumineers, Sex Pistols, Ben Howard, and Jamie T. I'm also an award-winning songwriter, frequently writing and recording in my home studio, and have grown up playing in numerous bands.</p>
+        <h4 class="mono">GET IN TOUCH</h4>
         <dl class="facts">
           <dt>Email</dt><dd><a href="mailto:Joearmstrong03@gmail.com">Joearmstrong03@gmail.com</a></dd>
           <dt>Phone</dt><dd><a href="tel:+61422765094">0422 765 094</a></dd>
