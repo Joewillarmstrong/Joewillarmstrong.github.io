@@ -141,6 +141,8 @@ dialog::backdrop{background:rgb(0 0 0 / .6)}
 .facts dt{color:var(--muted)}
 .facts dd{margin:0;font-weight:600}
 .rationale{border-left:3px solid var(--accent);padding-left:20px;margin:0 0 32px;max-width:60ch;color:var(--fg)}
+.rationale p{margin:0 0 14px}
+.rationale p:last-child{margin:0}
 .tracklist{list-style:none;margin:0 0 28px;padding:0}
 .tracklist li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;padding:20px 0;border-top:1px solid var(--line)}
 .tracklist li:last-child{border-bottom:1px solid var(--line)}
@@ -287,7 +289,7 @@ fetch('portfolio.json',{cache:'no-cache'}).then(function(r){ if(!r.ok) throw r; 
           el('dt',{text:'Catalogue'}), el('dd',{text:e.assigned_publisher + ' only'})
         ]),
         e.rationale ? el('h4',{text:'MY APPROACH'}) : null,
-        e.rationale ? el('p',{cls:'rationale',text:e.rationale}) : null
+        e.rationale ? el('div',{cls:'rationale'},e.rationale.split('\n\n').map(function(t){ return el('p',{text:t}); })) : null
       ])
     ]);
 
