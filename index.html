@@ -100,7 +100,8 @@ img{max-width:100%}
 .contact-body{padding:8px 0 40px;font-size:20px}
 .contact-body .facts{margin:0}
 .contact-body h4{font-weight:600;font-size:13px;color:var(--accent);margin:0 0 14px;letter-spacing:.04em}
-.contact-body .about{margin:0 0 36px;max-width:62ch}
+.contact-body .about{margin:0 0 16px;max-width:62ch}
+.contact-body .about:has(+ h4){margin-bottom:36px}
 .plus{position:relative;width:48px;height:48px;flex:none;border:1px solid var(--line)}
 .plus::before,.plus::after{content:"";position:absolute;left:50%;top:50%;width:18px;height:2px;background:currentColor;transform:translate(-50%,-50%)}
 .plus::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .25s ease}
@@ -210,7 +211,8 @@ dialog::backdrop{background:rgb(0 0 0 / .6)}
       <summary><span>Contact</span><span class="plus" aria-hidden="true"></span></summary>
       <div class="contact-body">
         <h4 class="mono">ABOUT ME</h4>
-        <p class="about">With over five years of experience working for the world's biggest record labels, including Universal Music and Sony, across A&amp;R, domestic and international marketing, I've worked with artists such as Dermot Kennedy, The Lumineers, Sex Pistols, Ben Howard, and Jamie T. I'm also an award-winning songwriter, frequently writing and recording in my home studio.</p>
+        <p class="about">I've spent over five years at the world's biggest record labels, including Universal Music and Sony, working across A&amp;R and domestic and international marketing. I have run campaigns for a diverse roster that included artists such as Dermot Kennedy, The Lumineers, Sex Pistols, Ben Howard and Jamie T.</p>
+        <p class="about">I'm also an award-winning songwriter, writing and recording regularly in my home studio.</p>
         <h4 class="mono">GET IN TOUCH</h4>
         <dl class="facts">
           <dt>Email</dt><dd><a href="mailto:Joearmstrong03@gmail.com">Joearmstrong03@gmail.com</a></dd>
